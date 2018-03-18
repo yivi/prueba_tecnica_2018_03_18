@@ -13,9 +13,9 @@ class PuppyResult
 
     private $timestamp;
 
-    const STATUS_OK = 0;
-    const STATUS_CONNECTION_KO = 1;
-    const STATUS_ENCODING_KO = 2;
+    const STATUS_OK = 'STATUS_OK';
+    const STATUS_CONNECTION_KO = 'STATUS_CONNECTION_KO';
+    const STATUS_ENCODING_KO = 'STATUS_ENCODING_KO';
 
     /**
      * PuppyResult constructor.
@@ -23,7 +23,7 @@ class PuppyResult
      * @param array $recipes
      * @param $query
      */
-    public function __construct(int $status, array $recipes, PuppyQuery $query)
+    public function __construct(string $status, array $recipes, PuppyQuery $query)
     {
 
         $this->status = $status;
