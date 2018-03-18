@@ -28,4 +28,10 @@ class RecipeRestfulController extends Controller
         return $this->json($result, 200);
 
     }
+
+    public function notImplementedAction() {
+
+        // empty response, 501 status
+        return $this->json(['error' => 'Method not implemented.'], 501);
+    }
 }
